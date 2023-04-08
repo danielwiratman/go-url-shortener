@@ -1,5 +1,5 @@
 # go-url-shortener
-Daniel W' Go URL Shortener API
+Daniel's Go URL Shortener API
 
 Env to add:
 DB_USERNAME, 
