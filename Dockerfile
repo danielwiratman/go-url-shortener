@@ -1,7 +1,8 @@
 FROM golang:1.20.3
 WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
 COPY . .
-RUN go mod tidy
-RUN go build -o /godocker
+RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
 EXPOSE 9090
-CMD [ “/godocker” ]
+CMD ["/docker-gs-ping"]
