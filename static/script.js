@@ -10,7 +10,7 @@ shortenButton.onclick = async function () {
     const shortUrlInput = document.querySelector("#shortUrlInput")
     const url = urlInput.value
     const shortUrl = shortUrlInput.value
-    const res = await fetch(`http://localhost:${PORT}/create`, {
+    const res = await fetch(`http://${HOSTNAME}/create`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
